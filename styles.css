@@ -1,40 +1,101 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    background: #121212;
-    color: #ffffff;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    background: #1e1e1e;
-    padding: 15px;
-    text-align: center;
-}
-
-footer {
-    background: #1e1e1e;
-    padding: 15px;
-    text-align: center;
-}
-
-.social-links, .donation-links {
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    align-items: center;
+    height: 100vh;
 }
 
-.hidden {
-    display: none;
-}
-
-#admin-panel {
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%);
-    background: #1e1e1e;
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
     padding: 20px;
-    border-radius: 8px;
+}
+
+/* Header */
+header {
     text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Links */
+a {
+    color: #03a9f4;
+    text-decoration: none;
+    padding: 5px;
+}
+
+a:hover {
+    color: #ff4081;
+}
+
+/* Social Links and Donation Links */
+#social-links, #donation-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#social-links a, #donation-links a {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#social-links a:hover, #donation-links a:hover {
+    background-color: #444;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Stack links vertically on mobile */
+    #social-links, #donation-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Larger font sizes for better readability on small screens */
+    h1 {
+        font-size: 1.8em;
+    }
+
+    a {
+        font-size: 1.2em;
+    }
+
+    /* Container padding */
+    .container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    h1 {
+        font-size: 1.6em;
+    }
+
+    a {
+        font-size: 1.1em;
+    }
+
+    #social-links a, #donation-links a {
+        padding: 8px;
+    }
 }
