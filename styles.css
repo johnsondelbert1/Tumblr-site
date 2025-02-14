@@ -1,0 +1,40 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #1e1e1e;
+    padding: 15px;
+    text-align: center;
+}
+
+footer {
+    background: #1e1e1e;
+    padding: 15px;
+    text-align: center;
+}
+
+.social-links, .donation-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+#admin-panel {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
